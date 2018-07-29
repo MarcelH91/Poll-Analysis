@@ -1,0 +1,11 @@
+<h1>{{ question.question_text }}</h1>
+
+{% autoescape off %}
+{{ question.results_table }}
+{% endautoescape %}
+
+{% autoescape off %}
+{{ question.results_plot }}
+{% endautoescape %}
+
+<a href="{% url 'detail' question.id %}">Vote again?</a>
